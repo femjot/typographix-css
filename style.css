@@ -47,8 +47,75 @@ section {
     place-items: center;
     border: 5px;
 }
+
 h2 {
     font-size: 40px;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.active .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.active .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.active .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.nav-wrapper {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    height: 5vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    width: 10vw;
+    z-index: 0;
+    top: auto;
+    margin: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    height: 85%;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav.active {
+    transform: translateX(0);
 }
 
 /* Section 1 */
@@ -122,6 +189,11 @@ h2 {
 }
 
 /* Section 2 */
+#section-2 h2 {
+    /*margin-top: 50px;*/
+    margin-top: 10vh;
+}
+
 .main-image {
     height: 50%;
     width: auto;
@@ -159,6 +231,10 @@ h2 {
 }
 
 /* Section 5 */
+#section-5 h2 {
+    margin-top: 10vh;
+}
+
 /* Wave */
 .wave {
     width: 100%;
