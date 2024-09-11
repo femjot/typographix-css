@@ -54,30 +54,37 @@ h2 {
 }
 
 .menu-icon {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
     cursor: pointer;
-    margin: 10px;
+    top: 15px;
+    left: 15px;
+    width: 2rem;
+    height: 2rem;
+    z-index: 10;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
+.menu-icon div {
+    height: 0.25rem;
+    background-color: var(--on-background);
+    transition: all 0.3s ease-in-out;
 }
 
 /* Rotate first bar */
 .active .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+    transform: translateY(0.6rem) rotate(-45deg);
 }
 
 /* Fade out the second bar */
-.active .bar2 {opacity: 0;}
+.active .bar2 {
+    opacity: 0;
+}
 
 /* Rotate last bar */
 .active .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+    transform: translateY(-0.75rem) rotate(45deg);
 }
 
 .nav-wrapper {
@@ -85,7 +92,7 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--background);
+    background: dodgerblue;
     width: 100%;
     z-index: 10;
 }
@@ -116,11 +123,6 @@ nav ul li {
     margin: 1rem 0;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
 nav.active {
     transform: translateX(0);
 }
@@ -132,7 +134,7 @@ nav.active {
     align-items: center;
     z-index: 100;
     position: fixed;
-    top: 30px;
+    top: 15px;
     right: 25px;
     cursor: pointer;
 }
@@ -197,8 +199,7 @@ nav.active {
 
 /* Section 2 */
 #section-2 h2 {
-    /*margin-top: 50px;*/
-    margin-top: 10vh;
+    margin-top: 50px;
 }
 
 .main-image {
