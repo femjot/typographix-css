@@ -5,6 +5,7 @@
 :root {
     --on-background: rgb(66, 66, 66);
     --background: rgb(255,255,255);
+    --letter-spacing-animation: 1em;
 }
 
 [data-theme="dark"] {
@@ -158,7 +159,7 @@ nav.active {
 }
 
 .header h1 {
-    font-size: 100px;
+    font-size: clamp(60px, 10vw, 100px);
     font-weight: 500;
     font-style: italic;
     text-align: center;
@@ -169,7 +170,7 @@ nav.active {
 
 @keyframes focus-in-contract {
     0% {
-        letter-spacing: 1em;
+        letter-spacing: var(--letter-spacing-animation);
         filter: blur(12px);
         opacity: 0;
     }
@@ -263,3 +264,38 @@ nav.active {
     text-align: center;
     color: white;
 }
+
+/* Media Queries */
+
+/* All Mobile Devices */
+@media screen and (max-width: 1180px) {
+    :root {
+        --later-spacing-animation: .1em;
+    }
+
+    nav {
+        width: 100%;
+        background: var(--background);
+    }
+
+    .wave > svg:last-child {
+        border-bottom: 20px solid #344E41;
+    }
+}
+
+/* Tablet Horizontal */
+@media screen and (min-width: 900px) and (max-width: 1180px) {
+    .main-image {
+        height: auto;
+        width: 75%;
+        top: -5%;
+    }
+
+    .small-image {
+        height: 45%;
+        padding: 10px;
+        border-width: 5px;
+    }
+}
+
+
