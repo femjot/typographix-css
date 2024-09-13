@@ -265,7 +265,7 @@ nav.active {
     color: white;
 }
 
-/* Media Queries */
+/* --------------- Media Queries ---------------------------- */
 
 /* All Mobile Devices */
 @media screen and (max-width: 1180px) {
@@ -295,6 +295,39 @@ nav.active {
         height: 45%;
         padding: 10px;
         border-width: 5px;
+    }
+}
+
+/* Tablet Vertical */
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    /* Section 2 */
+    .main-image {
+        height: auto;
+        width: 85%;
+        top: -35%;
+        border-width: 5px;
+        padding: 10px;
+    }
+
+    /* Section 3 */
+    .small-image {
+        height: auto;
+        width: 75%;
+        border-width: 5px;
+        padding: 10px;
+        margin: auto 5% !important;
+        position: relative;
+        left: 5.5%;
+    }
+
+    /* Section 4 */
+    #section-4 {
+        margin-top: 50vh;
+    }
+
+    .blog-container {
+        position: relative;
+        top: -20%;
     }
 }
 
