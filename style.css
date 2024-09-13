@@ -331,4 +331,54 @@ nav.active {
     }
 }
 
+/* Smartphone Horizontal */
+@media screen and (min-width: 600px) and (max-width: 950px) {
+    nav ul {
+        font-size: 1.25rem;
+    }
+
+    .small-image {
+        height: 70%;
+    }
+
+    /* Section 4 */
+    #section-4 h2 {
+        margin-top: 15vh;
+    }
+}
+
+/* Smartphone Vertical */
+@media screen and (max-width: 600px) {
+    /* Section 1 */
+    .social-media-icons {
+        font-size: 45px;
+        top: -50px;
+    }
+
+    /* Section 2 */
+    .main-image {
+        height: auto;
+        max-width: 85%;
+        top: -45%;
+        padding: 10px;
+        border-width: 5px;
+    }
+
+    /* Section 3 */
+    .small-image {
+        height: auto;
+        width: 75%;
+        border-width: 5px;
+        padding: 10px;
+        margin: auto 5% !important;
+        position: relative;
+        left: 3.5%;
+    }
+
+    /* Section 4 */
+    .blog-container {
+        width: 80%;
+    }
+}
+
 
