@@ -284,7 +284,7 @@ nav.active {
 }
 
 /* Tablet Horizontal */
-@media screen and (min-width: 900px) and (max-width: 1180px) {
+@media screen and (min-width: 800px) and (max-width: 1180px) {
     .main-image {
         height: auto;
         width: 75%;
@@ -299,7 +299,12 @@ nav.active {
 }
 
 /* Tablet Vertical */
-@media screen and (min-width: 700px) and (max-width: 900px) {
+/* also Smartphone iPhone 12 PRO Horizontal: BE CAREFUL OVERLAPPING MQ */
+@media screen and (min-width: 700px) and (max-width: 821px) {
+    nav ul {
+        font-size:2rem !important;
+    }
+
     /* Section 2 */
     .main-image {
         height: auto;
@@ -349,6 +354,17 @@ nav.active {
 
 /* Smartphone Vertical */
 @media screen and (max-width: 600px) {
+    nav ul {
+        position: relative;
+        left: -20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+
     /* Section 1 */
     .social-media-icons {
         font-size: 45px;
@@ -376,8 +392,21 @@ nav.active {
     }
 
     /* Section 4 */
+    #section-4 h2 {
+        margin-top: 10vh;
+    }
+
     .blog-container {
         width: 80%;
+    }
+
+    /* Section 5 */
+    .wave > svg {
+        border-bottom: 20px solid transparent;
+    }
+
+    .footer {
+        bottom: 10px;
     }
 }
 
